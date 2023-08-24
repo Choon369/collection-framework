@@ -1,0 +1,37 @@
+import java.util.*;
+class naya
+{
+    public static void lets(String s, String m)
+    {
+        int x =s.length();
+        int y = m.length();
+        Set<Character> a= new HashSet<>();
+        Set<Character> b= new HashSet<>();
+        for(int i =0;i<x;i++)
+        {
+            if(!a.contains(s.charAt(i)))
+            {
+                a.add(s.charAt(i));
+            }
+            if(!b.contains(m.charAt(i)))
+            {
+                b.add(m.charAt(i));
+            }
+        }
+        if((x==y) && (a.size() ==b.size()))
+        {
+            System.out.println("AnaGram");
+        }
+        else
+        {
+            System.out.println(" not AnaGram");
+        }
+        return ;
+    }
+    public static void main(String[] args)
+    {
+        String s ="meem";
+        String m ="meme";
+        lets(s,m);
+    }
+}
