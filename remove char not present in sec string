@@ -1,0 +1,33 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void occur(String xiom,String su)
+    {
+        
+        Set<Character> ch = new HashSet<>();
+        for(int i =0;i<xiom.length();i++)
+        {
+            if(!ch.contains(xiom.charAt(i)))
+            {
+                ch.add(xiom.charAt(i));
+                 
+            }
+            
+        }
+        for(int i =0;i<su.length();i++)
+        {
+            if(!ch.contains(su.charAt(i)))
+            {
+                System.out.print(su.charAt(i));
+            }
+        }
+        return;
+    }
+    public static void main(String[] args) {
+        String s = "Satya Swarup";
+        String su ="Sahu";
+        occur(s,su);
+        
+    }
+}
