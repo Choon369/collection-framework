@@ -1,0 +1,33 @@
+import java.util.*;
+class nike
+{
+    public static int letsdo(String s)
+    {
+        Map<Character,Integer> map =new HashMap<>();
+        int c =1;
+        int max = Integer.MIN_VALUE;
+        for(int i = 0 ;i<s.length();i++)
+        {
+            if(!map.containsKey(s.charAt(i)))
+            {
+                map.put(s.charAt(i),c);
+            }
+            else
+            {
+                int cur =map.get(s.charAt(i));
+                map.put(s.charAt(i),cur+1);
+                if(map.get(s.charAt(i))>max)
+                {
+                    max =map.get(s.charAt(i));
+                }
+            }
+        }
+        return max;
+    }
+    public static void main(String[] args)
+    {
+        String s= "aabbddddrreee";
+        int max =letsdo(s);
+        System.out.println(max);
+    }
+}
