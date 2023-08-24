@@ -1,0 +1,37 @@
+
+import java.util.*;
+class str
+{
+    public static int todo(String s,String m)
+    {
+        int c =0;
+        for(int i =0;i<s.length();i++)
+        {
+            int x = s.charAt(i);
+            for(int j = 0;j<m.length();j++)
+            {
+                int z = m.charAt(j);
+                if(x==z)
+                {
+                    c++;
+                    break;
+                }
+                
+            }
+            if((c!=i+1) || (m.length()!=s.length()))
+            {
+                return -1;
+                
+            }
+        }
+        return c;
+        
+    }
+    public static void main(String[] args)
+    {
+        String s ="AMMA";
+        String m ="MAAM";
+        int x =todo(s,m);
+        System.out.println(x);
+    }
+}
